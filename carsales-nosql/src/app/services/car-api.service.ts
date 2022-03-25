@@ -13,11 +13,11 @@ export class CarApiService {
 
   carsDataCollection:AngularFirestoreCollection <ICar>;
 
-  carsData:Observable<ICar[]>;
+  carsData?:Observable<ICar[]>;
 
-  allCarsData:ICar[];
+  allCarsData?:ICar[];
 
-  errorMessage:string;
+  errorMessage?:string;
 
   constructor(private _http:HttpClient, private _afs: AngularFirestore)
   {

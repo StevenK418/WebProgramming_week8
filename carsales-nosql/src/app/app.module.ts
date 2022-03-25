@@ -6,6 +6,7 @@ import {AngularFireModule} from '@angular/fire/compat';
 import { AppComponent } from './app.component';
 import { CarlistComponent } from './carlist/carlist.component';
 import { CarComponent } from './car/car.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,11 @@ import { CarComponent } from './car/car.component';
     CarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
