@@ -11,13 +11,13 @@
     <label>Year</label>
     <input type="text" name="year" placeholder="Enter Year" #year>
 
-    <label> Image</label>
+    <label>Image</label>
     <input type="text" name="imageURL" placeholder="Enter Link to Image" #imageUrl>
 
     <button type="submit" (click)="addTheCar(make.value, model.value, year.value, imageUrl.value)">Add the Car</button>
   </form>
 </div>
 
-<div class="container">
+<div class="container md-12">
  <app-car *ngFor="let carData of carsData" [carData]="carData"></app-car>
 </div>
