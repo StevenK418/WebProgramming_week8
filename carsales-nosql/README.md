@@ -33,6 +33,10 @@ CA4 for my Web Programming module as part of my Bsc Hons in Computing at IT Slig
 =>  This is a simple Car sales database application built using Anular JS. 
 =>  The application stores and retrieves car data as NoSQL via Google's Firestore. 
 
+## Github Details
+=> Repository: https://github.com/StevenK418/WebProgramming_week8
+=> Git clone:   https://github.com/StevenK418/WebProgramming_week8.git
+
 ## Firebase Details: 
 => The live app is hosted on Firebase
     => The App may be accessed here: https://s00200293-stevenkelly-carsales.web.app/ 
