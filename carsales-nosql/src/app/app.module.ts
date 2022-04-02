@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import {AngularFireModule} from '@angular/fire/compat';
-import {environment} from '../environments/environment';
+import { environment } from 'src/environments/environment.prod';
 
 @NgModule({
   declarations: [

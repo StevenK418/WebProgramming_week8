@@ -22,4 +22,5 @@ CA4 for my Web Programming module as part of my Bsc Hons in Computing at IT Slig
     => I have added bootstrap to the project for improved Layout and design. 
     => HTML has been styled using Bootstrap classes only in order to improve usability and aesthetic. 
     => Firestore date rul has been added as requested. 
+    => (IMPORTANT: Environments directive in app.module.ts and main.ts had to be updated to use environments.prod explicitly as firebase project would not compile after NPM install otherwise.)
 
