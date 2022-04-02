@@ -1,12 +1,14 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {environment} from '../environments/environment';
-import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
-import {AngularFireModule} from '@angular/fire/compat';
+import { NgModule } from '@angular/core';
+
 import { AppComponent } from './app.component';
 import { CarlistComponent } from './carlist/carlist.component';
 import { CarComponent } from './car/car.component';
 import { HttpClientModule } from '@angular/common/http';
+
+import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import {AngularFireModule} from '@angular/fire/compat';
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AngularFireModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],

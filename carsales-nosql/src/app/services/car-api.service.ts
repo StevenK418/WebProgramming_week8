@@ -6,18 +6,19 @@ import { catchError, tap } from 'rxjs/operators';
 import {AngularFirestoreCollection, AngularFirestore} from "@angular/fire/compat/firestore";
 import {ICar} from "../interfaces/car";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
+
 export class CarApiService {
 
-  carsDataCollection:AngularFirestoreCollection <ICar>;
+  carsDataCollection:AngularFirestoreCollection<ICar>;
 
   carsData?:Observable<ICar[]>;
 
   allCarsData?:ICar[];
 
   errorMessage?:string;
+
+ 
 
   constructor(private _http:HttpClient, private _afs: AngularFirestore)
   {
@@ -27,15 +28,21 @@ export class CarApiService {
    getCarData():Observable<ICar[]>
    {
       //Connect to the database
-    this.carsData = this.carsDataCollection.valueChanges();
-    this.carsData.subscribe(
-      data => console.log("getCarsData:" + JSON.stringify(data))
+      this.carsData = this.carsDataCollection.valueChanges({idField:`id`});
+      this.carsData.subscribe(
+        data => console.log("getCarsData:" + JSON.stringify(data))
     )
+
     return this.carsData;
    }
 
    addCarData(car:ICar):void{
      this.carsDataCollection.add(JSON.parse(JSON.stringify(car)))
+   }
+
+   delCarData(carId:string):void
+   {
+
    }
 
    private handleError (err:HttpErrorResponse)

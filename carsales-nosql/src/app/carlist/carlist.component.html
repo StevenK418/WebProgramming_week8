@@ -1,25 +1,35 @@
-
 <div class="container mb-3">
   <button class="btn btn-primary mb-3 mt-3 " (click)="show = !show">{{show ? 'Hide' : 'Add a Car'}}</button>
 <div *ngIf="show">
   <form>
-    <label>Make</label>
-    <input type="text" name="make" placeholder="Enter Make" #make>
-
-    <label>Model</label>
-    <input type="text" name="model" placeholder="Enter Model" #model>
-
-    <label>Year</label>
-    <input type="text" name="year" placeholder="Enter Year" #year>
-
-    <label>Image</label>
-    <input type="text" name="imageURL" placeholder="Enter Link to Image" #imageUrl>
-
-    <button type="submit" class="btn btn-primary m-3" (click)="addTheCar(make.value, model.value, year.value, imageUrl.value)">Add the Car</button>
+    <div class="container bg-dark text-white text-uppercase">
+      <div class="row border">
+            <div class="col-lg-2 col-sm-12">
+              <label>Make</label>
+              <input type="text" name="make" placeholder="Enter Make" class="form-control" #make>
+            </div>
+            <div class="col-lg-2 col-sm-12">
+              <label>Model</label>
+              <input type="text" name="model" placeholder="Enter Model" class="form-control" #model>
+            </div>
+            <div class="col-lg-2 col-sm-12">
+              <label>Year</label>
+              <input type="text" name="year" placeholder="Enter Year" class="form-control" #year>
+            </div>
+            <div class="col-lg-2 col-sm-12">
+              <label>Image</label>
+              <input type="text" name="imageURL" placeholder="Enter Link to Image" class="form-control" #imageUrl>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+              <button type="submit" class="btn btn-primary m-4" (click)="addTheCar(make.value, model.value, year.value, imageUrl.value)">Add the Car</button>
+            </div>
+        </div>
+      </div>
   </form>
 </div>
 </div>
 
-<div class="container">
- <app-car *ngFor="let carData of carsData" [carData]="carData"></app-car>
+<div class="container ">
+      <!-- List all existing cars -->
+    <app-car *ngFor="let carData of carsData" [carData]="carData"></app-car>
 </div>
