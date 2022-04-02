@@ -1,12 +1,12 @@
 export const environment = {
   production: true,
   firebase:{
-    apiKey: "AIzaSyBCHycQKbxUruhB4QgiQ_lEoUTGG8buNgo",
-    authDomain: "week8labtest.firebaseapp.com",
-    projectId: "week8labtest",
-    storageBucket: "week8labtest.appspot.com",
-    messagingSenderId: "850208150515",
-    appId: "1:850208150515:web:ffe1be85ff2728d1cf3886"
+    apiKey: "AIzaSyDk4f63LvpMDlnyK7JgUYUReMd0gzU1L1E",
+    authDomain: "s00200293-stevenkelly-carsales.firebaseapp.com",
+    projectId: "s00200293-stevenkelly-carsales",
+    storageBucket: "s00200293-stevenkelly-carsales.appspot.com",
+    messagingSenderId: "1000841321122",
+    appId: "1:1000841321122:web:8eca027eb3139ddd9955fb"
   }
 };
 

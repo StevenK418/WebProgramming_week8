@@ -1,18 +1,21 @@
-<div class="container text-center font-weight-bold bg-light">
-  <div class="row border">
-    <div class="col-2">
+<div class="container text-center  bg-light">
+  <div class="row border-black font-weight-bold">
+    <div class="col-2 align-self-center">
+      {{carData?.id}}
+    </div>
+    <div class="col-2 align-self-center">
       {{carData?.make}}
     </div>
-    <div class="col-3">
+    <div class="col-3 align-self-center">
       {{carData?.model}}
     </div>
-    <div class="col-1">
+    <div class="col-1 align-self-center">
       {{carData?.year}}
     </div>
-    <div class="col-2">
+    <div class="col-2 align-self-center">
         <img src="{{carData?.imageUrl}}" [style.width.px]='carImageWidth' class="img img-fluid img-thumbnail">
     </div>
-    <div class="col-2">
+    <div class="col-2 align-self-center">
       <button class="btn btn-danger m-4" (click)="deleteCar(carData?.id)">Delete Car</button>
     </div>
   </div>
